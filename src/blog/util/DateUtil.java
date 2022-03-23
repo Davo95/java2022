@@ -17,6 +17,9 @@ public class DateUtil {
     }
 
     public static String dateToString(Date date, String format) {
+        if (date == null){
+            return new SimpleDateFormat(format).format(new Date());
+        }
         return new SimpleDateFormat(format).format(date);
     }
 }
